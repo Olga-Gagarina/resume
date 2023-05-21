@@ -261,7 +261,7 @@ router.get('/work', function (req, res) {
 router.get('/person', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('person', {
-    layout: 'person',
+    layout: 'basik',
     title: 'person',
     person: {
       name: 'Emma Johnson',
