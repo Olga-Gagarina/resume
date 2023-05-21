@@ -1,0 +1,131 @@
+<div>
+    {{#with program}}
+    {{#with excursion}}
+    <div>
+        <h1> {{name}} </h1>
+    </div>
+    <hr>
+    <div>
+        {{#with location}}
+        <div>
+            <h2> {{city}}
+                {{country}} </h2>
+        </div>
+        <p>
+        <h3> <a href="{{city}}" target="_blank"> <strong>{{city}} </strong></a> </h3> & </h3><a href="{{country}}"
+            target="_blank"> <strong> {{country}} </strong> </a> </h3>
+        </p>
+        {{/with}}
+        <div>
+            <h4> Date: <time> {{date}} </time></h4>
+        </div>
+        <hr>
+        <br>
+        <br>
+        <div>
+            <h2>Program : </h2>
+            <ul>
+                {{#each programs}}
+                <li>
+                    <b> {{name}} </b><br>
+                    <hr>
+                    <div>Type:<strong> {{type}}</strong> </div>
+                    <div>Duration : ({{duration}}) </div>
+                    <br>
+                    <div>
+                        <b>Details :</b>
+
+                    </div>
+
+
+                    {{#with details}}
+
+                    {{#if museum}}
+                    <div> Museum :<strong> {{museum.name}} </strong> </div>
+                    {{else}}
+                    <div> Venue: <strong>{{venue.name}} </strong> </div>
+                    {{/if}}
+
+
+                    <br>
+                    {{#with museum}}
+
+                    {{!-- <p><b> {{name}} </b> </p> --}}
+                    <address> {{location.address}},{{location.city}},{{location.country}} </address>
+                    <br>
+                    <ul>
+                        {{#each exhibits}}
+                        <li>
+                            <city>Name : {{name}} </city>
+                            {{#if artist:null}}
+                            <br>
+                            {{else}}
+                            <div> {{artist}}</div>
+                            {{/if}}
+                            {{!-- {{artist:null}}
+                            {{#unless artist}}
+                            <div> (....) </div>
+                            {{/unless}} --}}
+                            <div> Description: {{description}} </div>
+                            {{#if audio_guide:true}}
+                            <br>
+                            {{else}}
+                            <div> Audioguide </div>
+                            {{/if}}
+
+                        </li>
+                        {{/each}}
+                    </ul>
+                    <br>
+                    {{/with}}
+                    {{#with venue}}
+
+                    {{!-- <div> Venue: <strong>{{name}} </strong> </div> --}}
+                    <ul>
+                        {{#with location}}
+                        <li>
+                            <div> {{address}} </div>
+                            <div> {{city}} </div>
+                            <div> {{country}} </div>
+                        </li>
+                        {{/with}}
+                    </ul>
+
+
+                    {{/with}}
+
+                    {{#if performers}}
+                    <div><strong>Performens:</strong></div>
+
+                    {{else}}
+                    <br>
+                    {{/if}}
+                    {{!-- <div>Performens:</div> --}}
+                    <ul>
+                        {{#each performers}}
+                        <li>
+                            <div> {{name}} </div>
+                            <div> {{type}} </div>
+                        </li>
+                        {{/each}}
+                    </ul>
+                    <br>
+                    <div>Guide:</div>
+
+                    {{#with guide}}
+                    <em>Name : {{name}} </em><br>
+                    <em> Language: {{language}} </em> <br>
+                    <em> Rating: ({{ rating}}) </em>
+                    {{/with}}
+            </ul>
+        </div>
+        <br>
+        {{/with}}
+        </li>
+        {{/each}}
+        </ul>
+    </div>
+</div>
+{{/with}}
+{{/with}}
+</div>
