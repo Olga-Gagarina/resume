@@ -1,0 +1,188 @@
+<main>
+    <div class="row ms-3 ">
+
+        <div class="card mb-5">
+
+
+            {{#with navigation}}
+            <ul class="nav p-3">
+
+                {{#each links}}
+                {{#if @last}}
+                <div class="nav-item ">
+                    <a href=" {{href}}" target="_blank" class="nav-link disabled"> {{text}} </a>
+
+                </div>
+                {{else}}
+                <div class="nav-item ">
+                    <a href=" {{href}}" target="_blank" class="nav-link active"> {{text}} </a>
+
+                </div>
+                {{/if}}
+
+                {{/each}}
+            </ul>
+            {{/with}}
+
+        </div>
+        {{#with header}}
+        <h2 class="mt-3"> {{title}} </h2>
+
+        {{#with button}}
+        <div class="nav">
+            <div class="nav-item mt-3 mb-5">
+                <a href="{{link}}" class=" nav-link active btn  text-secondary">{{text}}</a>
+            </div>
+        </div>
+        {{/with}}
+        {{/with}}
+        <hr>
+        {{#each goodsBlock}}
+        <div class="card mb-5 ms-1">
+
+            <div class="row">
+
+                <div class="col-2  mb-1 mt-3  ">
+
+
+                    {{!-- <img src="{{image}}"> --}}
+                    - <img src="{{image}}" alt="img">
+                    {{!-- <img scr="https://picsum.photos/400/200" alt="img"> --}}
+
+
+
+                </div>
+                <div class=" col-4 pt-4 pb-2">
+                    <h5>{{name}} </h5>
+                    <p class="mt-2">{{description}} </p>
+                </div>
+
+                <div class=" col-2 ">
+
+
+                    {{#with price}}
+                    <div class="mt-5">
+                        <div> {{title}}: </div>
+                        <div class="mt-2 mb-1"><b> {{value}} </b> </div>
+                    </div>
+
+                    {{/with}}
+                </div>
+                <div class="col-2 pt-5 pb-5 ">
+
+                    <div> {{amount}} </div>
+
+                </div>
+                <div class=" col-2 ">
+                    {{#each buttons}}
+                    {{#if isPrimary}}
+                    <li class="btn btn-primary m-3 ms-0"> {{text}} </li>
+                    {{/if}}
+                    {{#if isDanger}}
+                    <div class="btn btn-outline-danger mb-4"> {{text}} </div>
+                    {{/if}}
+                    {{/each}}
+                </div>
+            </div>
+
+        </div>
+        {{/each}}
+        <hr class="mt-5 mb-5">
+        {{#with total}}
+        <h4> {{title}} </h4>
+        <h1> {{amount}} </h1>
+        <div> {{delivery}} </div>
+        {{#each buttons}}
+        <ul class="nav">
+            <div class="nav-item  ">
+                {{#if isSuccess}}
+                <div class="btn btn-success nav-link text-light mt-4 mb-2">{{text}} </div>
+                {{/if}}
+                {{#if isOutline}}
+                <div class="btn btn-outline-success nav-link text-success mt-2 mb-5">{{text}} </div>
+                {{/if}}
+            </div>
+        </ul>
+        {{/each}}
+        {{/with}}
+        <hr class="mb-5">
+        {{#with goodsOtherBlock}}
+        <h4 class="text-center mb-3"> {{title}} </h4>
+        <div class="row">
+
+            {{#each cards}}
+            <div class="card col-4 ">
+                <img src="{{image}} " class="card-img-top" alt="img">
+                <div class="card-body ">
+                    <div class="card-title ">
+                        <h4> {{title}}
+                            {{#if isHot}}
+                            <span class="badge text-bg-warning text-uppercase  rounded-pill">HOT!</span>
+                            {{/if}}
+                            {{#if idNew}}
+                            <span class="badge text-bg-success text-uppercase  rounded-pill">Нове</span>
+                            {{/if}}
+                        </h4>
+
+                    </div>
+
+                    <p>{{description}} </p>
+
+                </div>
+            </div>
+            {{/each}}
+        </div>
+        {{/with}}
+        <hr class="mt-5 mb--5">
+        <div class="row">
+            {{#with subscribe}}
+            <div class="card text-bg-dark col-12 m-1 pe-2">
+                {{!-- <div class="text-bg-dark"> --}}
+                    <h2> {{header}} </h2>
+                    {{!--
+                </div> --}}
+                <p class="mt-2 mb-5"> {{description}} </p>
+                <div class="nav">
+                    <div class="nav-item">
+                        {{#each buttons}}
+                        <div> <a href="{{link}} " target="a_blank" class="btn btn-primary nav-link text-light  mb-2 ">
+                                {{text}}
+                            </a> </div>
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+            {{/with}}
+            <hr class="mt-5 mb-5">
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="row">
+                    {{#each footer}}
+                    <div class="col-2">
+                        <div class="nav">
+
+                            <div class=" nav-item">
+                                {{#each this}}
+
+                                {{#if @first}}
+                                <li class="nav-link " target="_blank" href=" {{link}} ">{{text}} </li>
+                                {{else}}
+                                <a class="nav-link active" target="a_blank" href=" {{link}} ">{{text}} </f>
+                                    {{/if}}
+
+
+                                    {{#if @last}}
+                                    <a class="nav-link disabled" target="_blank" href=" {{link}} ">{{text}} </a>
+
+                                    {{/if}}
+                                    {{/each}}
+                            </div>
+                        </div>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+
+</main>
