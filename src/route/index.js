@@ -683,6 +683,7 @@ router.get('/bootstrap', function (req, res) {
   })
 })
 
+<<<<<<< HEAD
 // router.get Створює нам один ентпоїнт
 
 //           ↙ тут вводимо шлях (PATH) до сторінки
@@ -693,6 +694,30 @@ router.get('/task31', function (req, res) {
   res.render('task31', {
     layout: 'basik',
     title: 'task31',
+=======
+<<<<<<< HEAD
+//           ↙ тут вводимо шлях (PATH) до сторінки
+router.get('/shophome', function (req, res) {
+  // res.render генерує нам HTML сторінку
+
+  //            ↙ cюди вводимо назву файлу з сontainer
+  res.render('shophome', {
+    layout: 'shop',
+=======
+// ================================================================
+
+// router.get Створює нам один ентпоїнт
+
+//           ↙ тут вводимо шлях (PATH) до сторінки
+router.get('/shopcart', function (req, res) {
+  // res.render генерує нам HTML сторінку
+
+  //            ↙ cюди вводимо назву файлу з сontainer
+  res.render('shopcart', {
+    layout: 'basik',
+    title: 'shopcart',
+>>>>>>> 406652a354dba9f57d80078a4587b6f868eb384e
+>>>>>>> cab8d3f2ecb27c04f6b96ce768769735fbcef229
     navigation: {
       links: [
         {
@@ -708,6 +733,7 @@ router.get('/task31', function (req, res) {
           href: 'https://www.youtube.com/',
         },
       ],
+<<<<<<< HEAD
       button: {
         text: 'Lets start',
         href: 'https://nodejs.org/en/',
@@ -895,6 +921,374 @@ router.get('/task31', function (req, res) {
     footer: {
       title: 'Navigation',
       navigation: [
+=======
+    },
+
+<<<<<<< HEAD
+    newsBlock: {
+      title: 'Latest News',
+      cards: [
+        {
+          title: 'COVID-19 Vaccinations Begin in Europe',
+          description:
+            'As the world continues to grapple with the ongoing COVID-19 pandemic, Europe begins its vaccination rollout, with healthcare workers and the elderly among the first to receive the vaccine.',
+          isTop: false,
+          isNew: false,
+        },
+        {
+          title: 'Tesla Stock Surges After Record Sales',
+          description:
+            "Tesla's stock price jumps 10% following the company's announcement of record sales in the last quarter, thanks in part to strong demand for its electric vehicles.",
+          isTop: true,
+          isNew: true,
+        },
+        {
+          title:
+            'New Study Shows Benefits of Meditation for Mental Health',
+          description:
+            'A new study published in the Journal of the American Medical Association finds that practicing mindfulness meditation can lead to improved mental health outcomes for people struggling with depression and anxiety.',
+          isTop: false,
+          isNew: false,
+        },
+        {
+          title: 'NASA Launches New Mars Rover',
+          description:
+            "NASA's Perseverance rover successfully launches on a mission to explore Mars, with the goal of collecting samples of the planet's surface and searching for signs of ancient microbial life.",
+          isTop: false,
+          isNew: true,
+        },
+        {
+          title:
+            'GameStop Shares Soar as Reddit Traders Rally',
+          description:
+            'Shares of GameStop surge as amateur traders on the social media platform Reddit rally to drive up the price, in what some are calling a battle between Wall Street and Main Street.',
+          isTop: false,
+          isNew: false,
+        },
+        {
+          title:
+            'UK Announces Plan to Ban Sale of Gas-Powered Cars by 2030',
+          description:
+            'In an effort to combat climate change, the UK government announces a plan to ban the sale of new gas-powered cars and vans by 2030, with hybrid vehicles to follow in 2035.',
+          isTop: true,
+          isNew: false,
+        },
+        {
+          title:
+            'New Study Shows Link Between Exercise and Longevity',
+          description:
+            'A new study published in the Journal of the American Medical Association suggests that regular exercise can help people live longer, with participants who exercised regularly having a lower risk of premature death.',
+          isTop: false,
+          isNew: false,
+        },
+        {
+          title: 'Amazon Expands Grocery Delivery Service',
+          description:
+            'Amazon announces an expansion of its grocery delivery service, with plans to offer free delivery to Prime members on orders over $35 and to expand its selection of fresh and organic produce.',
+          isTop: false,
+          isNew: true,
+=======
+    header: {
+      title: 'Кошик',
+      button: {
+        text: 'Продовжити покупки',
+        link: 'https://www.youtube.com/',
+      },
+    },
+
+    goodsBlock: [
+      {
+        image: 'https://picsum.photos/110/110',
+        name: 'Samsung Galaxy S21 Ultra ',
+        description:
+          'екран 6.8", процесор Exynos 2100/Snapdragon 888, 12 ГБ ОЗУ, камера 108 МП, акумулятор 5000 мАг',
+        price: { title: 'Ціна', value: '25 000 ₴' },
+        amount: '1 шт.',
+        buttons: [
+          { text: 'Додати', isPrimary: true },
+          { text: 'Видалити', isDanger: true },
+        ],
+      },
+      {
+        image: 'https://picsum.photos/110/110',
+        name: 'Ноутбук Dell XPS 13',
+        description:
+          'екран 13.3", процесор Intel Core i7-1165G7, 16 ГБ ОЗУ, SSD на 512 ГБ, вага 1.2 кг.',
+        price: { title: 'Ціна', value: '25 000 ₴' },
+
+        amount: '1 шт.',
+        buttons: [
+          { text: 'Додати', isPrimary: true },
+          { text: 'Видалити', isDanger: true },
+        ],
+      },
+      {
+        image: 'https://picsum.photos/110/110',
+        name: 'Телевізор LG OLED CX',
+        description:
+          'екран 55", роздільна здатність 4K, Smart TV, HDR, звук Dolby Atmos, 4 HDMI порти, 3 USB порти.',
+        price: { title: 'Ціна', value: '25 000 ₴' },
+
+        amount: '1 шт.',
+        buttons: [
+          { text: 'Додати', isPrimary: true },
+          { text: 'Видалити', isDanger: true },
+        ],
+      },
+      {
+        image: 'https://picsum.photos/110/110',
+        name: 'Навушники Sony WH-1000XM4',
+        description:
+          'Bluetooth 5.0, активне шумозаглушення, 30 годин автономної роботи, сенсорне управління, вага 254 г.',
+        price: { title: 'Ціна', value: '25 000 ₴' },
+
+        amount: '1 шт.',
+        buttons: [
+          { text: 'Додати', isPrimary: true },
+          { text: 'Видалити', isDanger: true },
+        ],
+      },
+    ],
+
+    total: {
+      title: 'Сума замовлення',
+      amount: '75 000 ₴',
+      delivery: 'Без доставки',
+      buttons: [
+        {
+          text: 'Оформити замовлення',
+          link: 'https://www.youtube.com/',
+          isSuccess: true,
+        },
+        {
+          text: 'Оформити кредит',
+          link: 'https://www.youtube.com/',
+          isOutline: true,
+>>>>>>> 406652a354dba9f57d80078a4587b6f868eb384e
+        },
+      ],
+    },
+
+<<<<<<< HEAD
+    goodsBlock: {
+      tabs: [
+        {
+          isActive: true,
+          isDisabled: false,
+          text: 'Electronics',
+        },
+        {
+          isActive: false,
+          isDisabled: false,
+          text: 'Home & Kitchen',
+        },
+        {
+          isActive: false,
+          isDisabled: false,
+          text: 'Clothing & Accessories',
+        },
+        {
+          isActive: false,
+          isDisabled: true,
+          text: 'Toys & Games',
+        },
+      ],
+=======
+    goodsOtherBlock: {
+      title: 'See other products',
+>>>>>>> 406652a354dba9f57d80078a4587b6f868eb384e
+      cards: [
+        {
+          image: 'https://picsum.photos/400/200',
+          title: 'iPhone 13',
+          description:
+            'The latest iPhone model features a new A15 Bionic chip, improved camera system, and longer battery life.',
+          isHot: false,
+<<<<<<< HEAD
+          isNew: false,
+=======
+          idNew: false,
+>>>>>>> 406652a354dba9f57d80078a4587b6f868eb384e
+        },
+        {
+          image: 'https://picsum.photos/400/200',
+          title: 'MacBook Pro',
+          description:
+            "Apple's high-end laptop features a 16-inch Retina display, powerful M1 Pro or M1 Max chip, and up to 64GB of RAM.",
+          isHot: true,
+<<<<<<< HEAD
+          isNew: false,
+=======
+          idNew: false,
+>>>>>>> 406652a354dba9f57d80078a4587b6f868eb384e
+        },
+        {
+          image: 'https://picsum.photos/400/200',
+          title: 'AirPods Pro',
+          description:
+            "Apple's premium wireless earbuds feature active noise cancellation, a customizable fit, and up to 4.5 hours of listening time.",
+          isHot: false,
+<<<<<<< HEAD
+          isNew: false,
+        },
+        {
+          image: 'https://picsum.photos/400/200',
+          title: 'Sony Bravia XR A90J',
+          description:
+            'This OLED TV boasts a 4K resolution, HDR support, and a high refresh rate for smooth motion handling.',
+          isHot: false,
+          isNew: true,
+        },
+        {
+          image: 'https://picsum.photos/400/200',
+          title: 'Nintendo Switch OLED Model',
+          description:
+            'The latest iteration of the popular gaming console features a larger OLED screen and improved audio quality.',
+          isHot: false,
+          isNew: false,
+        },
+        {
+          image: 'https://picsum.photos/400/200',
+          title: 'Bose SoundLink Revolve+',
+          description:
+            'This portable Bluetooth speaker features 360-degree sound, water-resistant construction, and up to 16 hours of battery life.',
+          isHot: true,
+          isNew: true,
+        },
+      ],
+    },
+=======
+          idNew: false,
+        },
+      ],
+    },
+
+>>>>>>> 406652a354dba9f57d80078a4587b6f868eb384e
+    subscribe: {
+      header: 'Unlock Premium Content',
+      description:
+        'Subscribe to access exclusive content and features.',
+      buttons: [
+        {
+          text: 'Register Now',
+          link: 'https://www.youtube.com/',
+        },
+        {
+          text: 'Buy Subscription',
+          link: 'https://www.youtube.com/',
+        },
+      ],
+    },
+<<<<<<< HEAD
+=======
+
+    footer: [
+      [
+        {
+          text: 'Home',
+          link: 'https://www.youtube.com/',
+        },
+        {
+          text: 'Trending',
+          link: 'https://www.youtube.com/feed/trending',
+        },
+        {
+          text: 'Subscriptions',
+          link: 'https://www.youtube.com/feed/subscriptions',
+        },
+        {
+          text: 'Library',
+          link: 'https://www.youtube.com/feed/library',
+        },
+      ],
+      [
+        {
+          text: 'History',
+          link: 'https://www.youtube.com/feed/history',
+        },
+        {
+          text: 'Your Videos',
+          link: 'https://www.youtube.com/feed/my_videos',
+        },
+        {
+          text: 'Live',
+          link: 'https://www.youtube.com/live',
+        },
+        {
+          text: 'Settings',
+          link: 'https://www.youtube.com/account',
+        },
+      ],
+      [
+        {
+          text: 'Watch Later',
+          link: 'https://www.youtube.com/playlist?list=WL',
+        },
+        {
+          text: 'Liked Videos',
+          link: 'https://www.youtube.com/playlist?list=LL',
+        },
+        {
+          text: 'Music',
+          link: 'https://www.youtube.com/music',
+        },
+        {
+          text: 'Gaming',
+          link: 'https://www.youtube.com/gaming',
+        },
+      ],
+      [
+        {
+          text: 'Sports',
+          link: 'https://www.youtube.com/channel/UCo_q6aOlvPH7M-j_XGWVgXg',
+        },
+        {
+          text: 'News',
+          link: 'https://www.youtube.com/news',
+        },
+        {
+          text: 'Fashion & Beauty',
+          link: 'https://www.youtube.com/channel/UC1x8rV_f-2yPpzlN0JWZXIQ',
+        },
+        {
+          text: 'Learning',
+          link: 'https://www.youtube.com/learning',
+        },
+      ],
+      [
+        {
+          text: 'Report History',
+          link: 'https://www.youtube.com/feed/history/report_history',
+        },
+        {
+          text: 'Help',
+          link: 'https://support.google.com/youtube/?hl=en',
+        },
+        {
+          text: 'Send Feedback',
+          link: 'https://support.google.com/youtube/answer/4347644?hl=en',
+        },
+        {
+          text: 'About',
+          link: 'https://www.youtube.com/about/',
+        },
+      ],
+    ],
+  })
+  //                  ↑↑ сюди вводимо JSON дані
+})
+
+//           ↙ тут вводимо шлях (PATH) до сторінки
+router.get('/shopreview', function (req, res) {
+  // res.render генерує нам HTML сторінку
+
+  //            ↙ cюди вводимо назву файлу з сontainer
+  res.render('shopreview', {
+    layout: 'shop',
+    title: 'shopreview',
+    navigation: {
+      links: [
+>>>>>>> cab8d3f2ecb27c04f6b96ce768769735fbcef229
         {
           text: 'Home',
           href: 'https://github.com/',
@@ -908,6 +1302,7 @@ router.get('/task31', function (req, res) {
           href: 'https://www.youtube.com/',
         },
       ],
+<<<<<<< HEAD
       socialMedia: [
         {
           name: 'Facebook',
@@ -938,11 +1333,277 @@ router.get('/task31', function (req, res) {
         },
       ],
     },
+=======
+    },
+    formBlock: {
+      header: 'Відгуки покупців про Ноут',
+      rating: {
+        title: 'Оцінка',
+        value: '4.5/5',
+      },
+      actionBlock: {
+        tabs: [
+          { text: 'Про товар' },
+          { text: 'Характеристики' },
+          { text: 'Відгуки', isActive: true },
+        ],
+        report: {
+          title: 'Залиште відгук про товар',
+          button: {
+            text: 'Написати відгук',
+            link: 'https://www.youtube.com/',
+          },
+        },
+      },
+      feedbackBlock: {
+        title:
+          'Хочете поділитись своєю думкою про наш магазин?',
+        buttons: [
+          {
+            text: 'Додати відгук',
+            isWarning: true,
+            link: 'https://www.youtube.com/',
+          },
+          {
+            text: 'Позитивні відгуки',
+            isSuccess: true,
+            link: 'https://www.youtube.com/',
+          },
+          {
+            text: 'Негативні відгуки',
+            isDanger: true,
+            link: 'https://www.youtube.com/',
+          },
+        ],
+      },
+      goodsInfo: {
+        photo: 'https://picsum.photos/110/100',
+        name: 'Ноут Asus',
+        price: '25 000 ₴',
+        inMarket: true,
+        buttons: [
+          {
+            text: 'Купити',
+            isPrimary: true,
+            link: 'https://www.youtube.com/',
+          },
+          {
+            text: 'Купити в кредит',
+            isSecondary: true,
+            link: 'https://www.youtube.com/',
+          },
+        ],
+        seller: {
+          title: 'Продавець',
+          value: 'Machinery',
+        },
+      },
+    },
+
+    reviewList: [
+      {
+        title: {
+          userName: 'Іван Іванов',
+          caption: 'Відгук покупця',
+          date: '1 січня 2023',
+        },
+        reviewBody: {
+          seller: {
+            title: 'Продавець',
+            value: 'Machinery',
+          },
+          rating: {
+            title: 'Оцінка',
+            value: '5/5',
+          },
+          text: [
+            "Цей ноутбук має гарний дизайн та добре виконує свої основні функції. Швидкість роботи та продуктивність в цілому є на задовільному рівні. Крім того, присутній достатній обсяг пам'яті та потужність акумулятора.",
+            ' Однак, можливі проблеми з перегрівом під час тривалого використання, та може бути недостатньої ємності жорсткого диска для потреб користувача. Крім того, ціна може бути дещо високою порівняно з аналогічними моделями.',
+          ],
+          advantages: {
+            title: 'Переваги',
+            text: 'Дизайн, швидкість роботи, обсяг пам’яті, акумулятор',
+          },
+          disadvantages: {
+            title: 'Недоліки',
+            text: 'Перегрів, ємкість жосткого диску',
+          },
+          images: [
+            'https://picsum.photos/110/100',
+            'https://picsum.photos/110/100',
+            'https://picsum.photos/110/100',
+          ],
+          coments: [
+            {
+              userName: 'Користувач',
+              date: '1 січня 2023',
+              text: 'Дякую за відгук, я подумаю про недоліки, про які ви згадували, перш ніж зробити покупку.',
+            },
+            {
+              userName: 'Користувач',
+              date: '3 січня 2023',
+              text: 'Дякую за корисний відгук! Це допомогло мені зробити вибір щодо покупки ноутбука.',
+            },
+            {
+              userName: 'Користувач',
+              date: '10 січня 2023',
+              text: 'Дякую за відгук, але я хотів би дізнатися більше деталей про проблеми з перегрівом, щоб зробити зважений вибір перед покупкою.',
+            },
+          ],
+        },
+      },
+      {
+        title: {
+          userName: 'Петро Петров',
+          caption: 'Відгук покупця',
+          date: '1 січня 2023',
+        },
+        reviewBody: {
+          seller: {
+            title: 'Продавець',
+            value: 'Machinery',
+          },
+          rating: {
+            title: 'Оцінка',
+            value: '5/5',
+          },
+          text: [
+            "Цей ноутбук має гарний дизайн та добре виконує свої основні функції. Швидкість роботи та продуктивність в цілому є на задовільному рівні. Крім того, присутній достатній обсяг пам'яті та потужність акумулятора.",
+          ],
+          advantages: {
+            title: 'Переваги',
+            text: 'Обсяг пам’яті, акумулятор',
+          },
+          disadvantages: {
+            title: 'Недоліки',
+            text: 'Не виявлено',
+          },
+          images: ['https://picsum.photos/110/100'],
+          coments: [
+            {
+              userName: 'Користувач',
+              date: '1 січня 2023',
+              text: 'Дякую за відгук, я подумаю про недоліки, про які ви згадували, перш ніж зробити покупку.',
+            },
+          ],
+        },
+      },
+    ],
+
+>>>>>>> 406652a354dba9f57d80078a4587b6f868eb384e
+    service: {
+      title: 'Our Services',
+      description:
+        'We offer a variety of services to meet your needs, including web design, content creation, and social media management.',
+      buttons: [
+        {
+          text: 'Show More',
+          link: 'https://www.youtube.com/',
+        },
+      ],
+    },
+
+    footer: [
+      [
+        {
+          text: 'Home',
+          link: 'https://www.youtube.com/',
+        },
+        {
+          text: 'Trending',
+          link: 'https://www.youtube.com/feed/trending',
+        },
+        {
+          text: 'Subscriptions',
+          link: 'https://www.youtube.com/feed/subscriptions',
+        },
+        {
+          text: 'Library',
+          link: 'https://www.youtube.com/feed/library',
+        },
+      ],
+      [
+        {
+          text: 'History',
+          link: 'https://www.youtube.com/feed/history',
+        },
+        {
+          text: 'Your Videos',
+          link: 'https://www.youtube.com/feed/my_videos',
+        },
+        {
+          text: 'Live',
+          link: 'https://www.youtube.com/live',
+        },
+        {
+          text: 'Settings',
+          link: 'https://www.youtube.com/account',
+        },
+      ],
+      [
+        {
+          text: 'Watch Later',
+          link: 'https://www.youtube.com/playlist?list=WL',
+        },
+        {
+          text: 'Liked Videos',
+          link: 'https://www.youtube.com/playlist?list=LL',
+        },
+        {
+          text: 'Music',
+          link: 'https://www.youtube.com/music',
+        },
+        {
+          text: 'Gaming',
+          link: 'https://www.youtube.com/gaming',
+        },
+      ],
+      [
+        {
+          text: 'Sports',
+          link: 'https://www.youtube.com/channel/UCo_q6aOlvPH7M-j_XGWVgXg',
+        },
+        {
+          text: 'News',
+          link: 'https://www.youtube.com/news',
+        },
+        {
+          text: 'Fashion & Beauty',
+          link: 'https://www.youtube.com/channel/UC1x8rV_f-2yPpzlN0JWZXIQ',
+        },
+        {
+          text: 'Learning',
+          link: 'https://www.youtube.com/learning',
+        },
+      ],
+      [
+        {
+          text: 'Report History',
+          link: 'https://www.youtube.com/feed/history/report_history',
+        },
+        {
+          text: 'Help',
+          link: 'https://support.google.com/youtube/?hl=en',
+        },
+        {
+          text: 'Send Feedback',
+          link: 'https://support.google.com/youtube/answer/4347644?hl=en',
+        },
+        {
+          text: 'About',
+          link: 'https://www.youtube.com/about/',
+        },
+      ],
+    ],
+>>>>>>> cab8d3f2ecb27c04f6b96ce768769735fbcef229
   })
   //                  ↑↑ сюди вводимо JSON дані
 })
 
 // ================================================================
+<<<<<<< HEAD
 
+=======
+>>>>>>> cab8d3f2ecb27c04f6b96ce768769735fbcef229
 // Підключаємо роутер до бек-енду
 module.exports = router
