@@ -46,7 +46,7 @@
 
 
                     {{!-- <img src="{{image}}"> --}}
-                    - <img src="{{image}}" alt="img">
+                    <img src="{{image}}" alt="img">
                     {{!-- <img scr="https://picsum.photos/400/200" alt="img"> --}}
 
 
@@ -168,15 +168,15 @@
                                 {{#if @first}}
                                 <li class="nav-link " target="_blank" href=" {{link}} ">{{text}} </li>
                                 {{else}}
-                                <a class="nav-link active" target="a_blank" href=" {{link}} ">{{text}} </f>
-                                    {{/if}}
+                                <a class="nav-link active" target="a_blank" href=" {{link}} ">{{text}} </a>
+                                {{/if}}
 
 
-                                    {{#if @last}}
-                                    <a class="nav-link disabled" target="_blank" href=" {{link}} ">{{text}} </a>
+                                {{#if @last}}
+                                <a class="nav-link disabled" target="_blank" href=" {{link}} ">{{text}} </a>
 
-                                    {{/if}}
-                                    {{/each}}
+                                {{/if}}
+                                {{/each}}
                             </div>
                         </div>
                     </div>
