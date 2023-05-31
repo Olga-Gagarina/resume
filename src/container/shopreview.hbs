@@ -1,0 +1,222 @@
+<main>
+
+    <div class="row ms-3 ">
+
+        <div class="card mt-5 mb-5">
+
+
+            {{#with navigation}}
+            <ul class="nav p-3">
+
+                {{#each links}}
+                {{#if @last}}
+                <div class="nav-item ">
+                    <a href=" {{href}}" target="_blank" class="nav-link disabled"> {{text}} </a>
+
+                </div>
+                {{else}}
+                <div class="nav-item ">
+                    <a href=" {{href}}" target="_blank" class="nav-link active"> {{text}} </a>
+
+                </div>
+                {{/if}}
+
+                {{/each}}
+            </ul>
+            {{/with}}
+
+        </div>
+        <div class="row">
+            <div class="col-8">
+                {{#with formBlock }}
+                <h1>{{header}} </h1>
+                {{#with rating}}
+                <div class="mt-3 mb-4">{{title}}: {{value}} </div>
+                {{/with}}
+
+                {{#with actionBlock}}
+                <div class="nav nav-tabs">
+
+                    {{#each tabs}}
+                    <div class="nav-item mb-5">
+                        {{#if isActive}}
+                        <div class="nav-link active ">{{text}} </div>
+                        {{else}}
+                        <a class="nav-link text-primary ">{{text}} </a>
+                        {{/if}}
+                    </div>
+                    {{/each}}
+
+                </div>
+                {{!--
+                <hr class="mt-1 mb-5"> --}}
+                <div class="card mt-5 mb-5 p-3">
+                    {{#with report}}
+                    <p> {{title}} </p>
+                    {{#with button}}
+                    <div><a href="{{link}}" class="btn btn-secondary">{{text}} </a></div>
+                    {{/with}}
+                    {{/with}}
+                </div>
+
+                {{/with}}
+                {{#with feedbackBlock}}
+                <h2>{{title}} </h2>
+                {{#each buttons}}
+                {{#if isWarning}}
+                <a href="{{link}} " class="btn btn-warning "> {{text}} </a>
+                {{/if}}
+                {{#if isSuccess}}
+                <a href="{{link}} " class="btn btn-success me-3 ms-3">{{text}} </a>
+                {{/if}}
+                {{#if isDanger}}
+                <a href="{{link}} " class="btn btn-danger">{{text}} </a>
+                {{/if}}
+                {{/each}}
+                {{/with}}
+
+
+
+            </div>
+            <div class="col-4 p-2">
+
+                <div class="card">
+
+                    {{#with goodsInfo}}
+
+                    <div class="row col-6  m-2 ">
+                        <img src="{{photo}}" alt="img" target="a_blank">
+                    </div>
+                    <h6 class="m-3">{{name}} </h6>
+                </div>
+                <div class="card mt-3 mb-3">
+                    <b class="m-3">{{price}} </b>
+                    {{#if inMarket}}
+                    {{#each buttons}}
+                    {{#if isPrimary}}
+                    <div class="m-2"> <a href="{{link}} " target="_blank" class="btn btn-primary">{{text}} </a>
+                    </div> {{/if}}
+                    {{#if isSecondary}}
+                    <div class="m-2">
+                        <a href="{{link}} " target="_blank" class="btn btn-secondary">{{text}} </a>
+
+                    </div>
+                    {{/if}}
+                    {{/each}}
+                    {{/if}}
+
+                </div>
+                <div class="card mt-3 mb-3 p-1 pt-2 ps-3">
+                    {{#with seller}}
+                    <p> {{title}}: <b>{{value}} </b> </p>
+                    {{/with}}
+
+                </div>
+            </div>
+
+        </div>
+        {{/with}}
+        {{/with}}
+        {{#each reviewList}}
+        {{#with title}}
+        <div class="card mt-5">
+            <div class="row">
+                <div class="card m-4">
+
+                    <b> {{userName}}</b>
+                    <p>{{ caption}} </p>
+                    <div><time>{{date}} </time> </div>
+                    {{/with}}
+                    <hr>
+                    {{#with reviewBody}}
+                    {{#with seller}}
+                    <p> {{title}}: {{value}} </p>
+                    {{/with}}
+                    {{#with rating}}
+                    <p>{{title}}: {{value}} </p>
+                    {{/with}}
+                    {{text}}
+                    {{#with advantages}}
+                    <div class=" mt-4 mb-4">
+                        <b> {{title}}: </b>
+                        {{text}}
+                    </div>
+                    {{/with}}
+                    {{#with disadvantages}}
+                    <b> {{title}}: </b>
+                    {{text}}
+                    {{/with}}
+                    <div>
+                        <img src="{{[0].images }}" class="m-5" alt="img">
+                        <img src="{{[1].images }}" class="m-5" alt="img">
+                        <img src="{{[2].images }}" class="m-5" alt="img">
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="row">
+                {{#each coments}}
+                <div class="card col-10 ms-5 m-4">
+
+                    <b>{{userName}} </b>
+                    <p><time>
+                            {{date}}
+                        </time> </p>
+                    <p>{{text}} </p>
+
+                </div>
+                {{/each}}
+            </div>
+            {{/with}}
+        </div>
+        {{/each}}
+    </div>
+
+    </div>
+
+    <hr>
+</main>
+<div class="card  text-bg-success p-2 text-center ">
+    {{#with service}}
+    <h2>{{title}} </h2>
+    <p> {{description}} </p>
+    {{#each buttons}}
+    <div> <a href="{{link}}" class="btn btn-primary"> {{text}} </a>
+    </div>
+    {{/each}}
+    {{/with}}
+</div>
+
+<main>
+    <hr class="mt-5 mb-5">
+    <div class="row">
+        <div class="col-12">
+            <div class="row">
+                {{#each footer}}
+                <div class="col-2">
+                    <div class="nav">
+
+                        <div class=" nav-item">
+                            {{#each this}}
+
+                            {{#if @first}}
+                            <li class="nav-link " target="_blank" href=" {{link}} ">{{text}} </li>
+                            {{else}}
+                            <a class="nav-link active" target="a_blank" href=" {{link}} ">{{text}} </a>
+                            {{/if}}
+
+
+                            {{#if @last}}
+                            <a class="nav-link disabled" target="_blank" href=" {{link}} ">{{text}} </a>
+
+                            {{/if}}
+                            {{/each}}
+                        </div>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+</main>

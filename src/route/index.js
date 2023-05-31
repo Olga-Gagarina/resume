@@ -754,9 +754,17 @@ router.get('/js', function (req, res) {
       },
     ],
   })
-  //                  ↑↑ сюди вводимо JSON дані
 })
 
 // ================================================================
+
+router.get('/bootstrap', function (req, res) {
+  //             ↙ cюди вводимо назву файлу з сontainer
+  res.render('bootstrap', {
+    layout: 'bootstrap',
+    title: 'bootstrap',
+  })
+})
+
 // Підключаємо роутер до бек-енду
 module.exports = router
