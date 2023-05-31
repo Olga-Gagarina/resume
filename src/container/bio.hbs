@@ -1,21 +1,24 @@
-<div>
+<div class="p-5">
     <div>
         <h1>
-            <em> {{name}} </em>
+            <em class="ms-4"> {{name}} </em>
         </h1>
     </div>
-    <br>
-    <hr>
-    <br>
-    <div><time> Birthdate: {{ birthdate}} </time> <br>Birthplace:<address>{{ birthplace}}</address>
+    <div class="text-end">
+        <br>
+        <hr>
+        <br>
+        <div><time> Birthdate: {{ birthdate}} </time> <br>Birthplace:<address>{{ birthplace}}</address>
+        </div>
+        <br>
+        <div><time> Deathdate: {{ deathdate}} </time> <br>Deathplace:<address>{{ deathplace}}</address>
+        </div>
+        <br>
+        <div>Nationality: {{ nationality }}</div>
+        <br>
+        <hr>
     </div>
-    <br>
-    <div><time> Deathdate: {{ deathdate}} </time> <br>Deathplace:<address>{{ deathplace}}</address>
-    </div>
-    <br>
-    <div>Nationality: {{ nationality }}</div>
-    <br>
-    <hr>
+
     <div> <strong>Occupation:</strong> {{occupation}} </div>
     <br>
     <div> <strong> Known for:</strong>
