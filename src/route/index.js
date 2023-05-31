@@ -260,7 +260,7 @@ router.get('/work', function (req, res) {
 router.get('/web', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('web', {
-    layout: 'bio',
+    layout: 'basik',
     title: 'WEB',
     web: {
       languages: [
@@ -1009,6 +1009,7 @@ router.get('/task31', function (req, res) {
 
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('task31', {
+    layout: 'basik',
     navigation: {
       links: [
         {
@@ -2178,7 +2179,7 @@ router.get('/shopreview', function (req, res) {
 
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('shopreview', {
-    // layout: 'shop',
+    layout: 'shop',
     navigation: {
       links: [
         {
@@ -2456,6 +2457,94 @@ router.get('/shopreview', function (req, res) {
     ],
   })
   //                  ↑↑ сюди вводимо JSON дані
+})
+
+router.get('/index8', function (req, res) {
+  //             ↙ cюди вводимо назву файлу з сontainer
+  res.render('index8', {
+    layout: 'index',
+    title: 'index8',
+    header: {
+      title: 'Список сторінок',
+      text: `Тут вам потрібно написати інформацію про ваш проєкт.
+      Поки що можна написати будь-який текст`,
+    },
+    navigation: {
+      buttons: [
+        {
+          text: 'summary',
+          link: '/summary',
+        },
+        {
+          text: 'skills',
+          link: '/skills',
+        },
+        {
+          text: 'work',
+          link: '/work',
+        },
+        {
+          text: 'education',
+          link: '/education',
+        },
+
+        {
+          text: 'person',
+          link: '/person',
+        },
+        {
+          text: 'program',
+          link: '/program',
+        },
+        {
+          text: 'shopcart',
+          link: '/shopcart',
+        },
+        {
+          text: 'shophome',
+          link: '/shophome',
+        },
+        {
+          text: 'shoporder',
+          link: '/shoporder',
+        },
+        {
+          text: 'shopreview',
+          link: 'shopreview',
+        },
+        {
+          text: 'task__21',
+          link: '/task21',
+        },
+        {
+          text: 'task__22',
+          link: '/task22',
+        },
+        {
+          text: 'task__31',
+          link: '/task31',
+        },
+      ],
+      buttons_sm: [
+        {
+          text: 'bio',
+          link: '/bio',
+        },
+        {
+          text: 'car',
+          link: '/car',
+        },
+        {
+          text: 'web',
+          link: '/web',
+        },
+        {
+          text: 'js',
+          link: '/js',
+        },
+      ],
+    },
+  })
 })
 
 // ================================================================
