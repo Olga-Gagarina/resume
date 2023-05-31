@@ -1,5 +1,9 @@
 html {
+<<<<<<< HEAD
+  max-width: 1000px;
+=======
   max-width: 1100px;
+>>>>>>> cab8d3f2ecb27c04f6b96ce768769735fbcef229
 }
 
 body {
