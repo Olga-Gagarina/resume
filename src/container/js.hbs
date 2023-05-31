@@ -1,0 +1,139 @@
+<br>
+<br>
+
+<div>
+    <h3>{{description}}<span class="badge bg-secondary">{{name}} </span></h3>
+</div>
+<div>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item active" aria-current="page">{{name}}</li>
+        </ol>
+    </nav>
+</div>
+
+<p>
+<div class="alert alert-warning" role="alert"><strong>{{history.year}} <p></p> {{history.founder}}</strong>
+
+</div>
+</p>
+
+<div class="alert alert-info" role="alert">
+    Types :
+    <br>
+    <ul>
+        {{#each types}}
+        <li>
+            <button type="button" class="btn btn-light"> {{this}}</button>
+        </li>
+        {{/each}}
+    </ul>
+    <br>
+    <div class="alert alert-primary" role="alert">
+        Syntax:<ul>
+            {{#with syntax}}
+            <li>
+                Variables:
+                <br>
+                <ul>
+                    {{#each variables }}
+                    <li>
+                        <button type="button" class="btn btn-light">{{this}} <br></button>
+                    </li>
+                    {{/each}}
+                </ul>
+
+                Functions:
+                <ul>
+                    {{#each functions}}
+                    <li>
+                        <button type="button" class="btn btn-light"> {{this}}</button>
+                    </li>
+                    {{/each}}
+                </ul>
+                Conditionals:
+                <ul>
+                    {{#each conditionals}}
+                    <li>
+                        <button type="button" class="btn btn-light"> {{this}}</button>
+                    </li>
+                    {{/each}}
+                </ul>
+                Loops:
+                <ul>
+                    {{#each loops }}
+                    <li>
+                        <button type="button" class="btn btn-light"> {{this}}</button>
+                    </li>
+                    {{/each}}
+                </ul>
+                Classes:
+                <ul>
+                    {{#each classes}}
+                    <li>
+                        <button type="button" class="btn btn-light"> {{this}}</button>
+                    </li>
+                    {{/each}}
+                </ul>
+            </li>
+            {{/with}}
+        </ul>
+    </div>
+
+
+</div>
+
+
+
+
+<div class="alert alert-danger" role="alert">
+    <div><strong> Features: </strong>
+        <ul>
+            {{#each features}}
+            <li>
+                {{this}}
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+</div>
+<div class="alert alert-info" role="alert">
+    <div><strong> Libraries: </strong>
+        <ul>
+            {{#each libraries}}
+            <li>
+                {{this}}
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+</div>
+
+<div class="alert alert-primary" role="alert">
+    <div><strong> Tools: </strong>
+        <ul>
+            {{#each tools}}
+            <li>
+                {{this}}
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+
+</div>
+<div class="alert alert-dark" role="alert">
+
+    <div><strong> Community: </strong>
+        <ul>
+            {{#each community}}
+            <li>
+                {{name}} / {{type}}
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+
+
+
+</div>
+</div>
