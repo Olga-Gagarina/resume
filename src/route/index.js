@@ -2513,6 +2513,10 @@ router.get('/', function (req, res) {
           link: 'shopreview',
         },
         {
+          text: 'shopcatalog',
+          link: '/shopcatalog',
+        },
+        {
           text: 'task__21',
           link: '/task21',
         },
